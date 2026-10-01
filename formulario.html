@@ -1,0 +1,126 @@
+<DOCTYPE html>
+<html lang="es">    
+    <head>
+        <meta charset="UTF-8 "/>
+        <link rel="stylesheet" href="colores.css">
+        <header>
+            <h2>Menu</h2>
+            <nav>
+                <link rel="stylesheet" href="estilo.css">
+                <a href="index.html" class="ENL">inicio</a>
+                <a href="horario.html" class="ENL">horario</a>
+                <a href="formulario.html" class="ENL">formulario</a>
+            </nav>
+        </header>
+    </head>    
+            <body>
+                    <main>
+                        <form>
+                                <fieldset>
+                                    <legend class="FOR">Formulario de contacto</legend>
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" id="nombre" name="nombre" required><br><br>
+
+                                    <label for="email">Correo electrónico:</label>
+                                    <input type="email" id="email" name="email" required><br><br>
+
+                                    <label for="mensaje">Mensaje:</label><br>
+                                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+                                    <fieldset>
+                                    <legend class="FOR">Fechas y horas</legend>
+
+                                    <!-- DATE -->
+                                    <p>
+                                        <label for="fecha">Fecha:</label>
+                                        <input type="date" id="fecha" name="fecha">
+                                    </p>
+
+                                    <!-- TIME -->
+                                    <p>
+                                        <label for="hora">Hora:</label>
+                                        <input type="time" id="hora" name="hora">
+                                    </p>
+
+                                    <!-- DATETIME-LOCAL -->
+                                    <p>
+                                        <label for="fechaHora">Fecha y hora:</label>
+                                        <input type="datetime-local" id="fechaHora" name="fechaHora">
+                                    </p>
+
+                                    <!-- MONTH -->
+                                    <p>
+                                        <label for="mes">Mes:</label>
+                                        <input type="month" id="mes" name="mes">
+                                    </p>
+
+                                    <!-- WEEK -->
+                                    <p>
+                                        <label for="semana">Semana:</label>
+                                        <input type="week" id="semana" name="semana">
+                                    </p>
+                                    </fieldset>
+                                    <fieldset>
+                                    <legend class="FOR">Listas</legend>
+
+                                    <!-- SELECT -->
+                                    <p>
+                                        <label for="provincia">Provincia:</label>
+
+                                        <select id="provincia" name="provincia">
+                                        <option value="">Selecciona una provincia</option>
+
+                                        <option value="cordoba">Córdoba</option>
+                                        <option value="ciudad_real">Ciudad Real</option>
+                                        <option value="toledo">Toledo</option>
+                                        <option value="jaen">Jaén</option>
+                                        </select>
+                                    </p>
+
+                                    <!-- SELECT CON GRUPOS -->
+                                    <p>
+                                        <label for="estudios">Estudios:</label>
+
+                                        <select id="estudios" name="estudios">
+                                        <optgroup label="Informática">
+                                            <option value="dam">DAM</option>
+                                            <option value="daw">DAW</option>
+                                            <option value="asir">ASIR</option>
+                                        </optgroup>
+
+                                        <optgroup label="Electrónica">
+                                            <option value="teleco">Sistemas de Telecomunicaciones</option>
+
+                                            <option value="electronica">Electrónica</option>
+                                        </optgroup>
+                                        </select>
+                                    </p>
+
+                                    <!-- SELECT MULTIPLE -->
+                                    <p>
+                                        <label for="lenguajes"> Lenguajes favoritos: </label>
+
+                                        <select id="lenguajes" name="lenguajes" multiple="" size="4">
+                                        <option value="html">HTML</option>
+                                        <option value="css">CSS</option>
+                                        <option value="javascript">JavaScript</option>
+                                        <option value="java">Java</option>
+                                        </select>
+                                    </p>
+                                    </fieldset>
+                        </form>
+                    </main>   
+                    <fieldset>
+          <legend class="FOR">Botones</legend>
+
+          <!-- SUBMIT -->
+          <input type="submit" value="Enviar formulario">
+
+          <!-- RESET -->
+          <input type="reset" value="Limpiar formulario">
+        </fieldset>
+                <footer>
+                    <p>CIFP VIRGEN DE GRACIA &copy; 2026</p>
+                </footer>     
+            </body>
+</html>

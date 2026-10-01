@@ -1,0 +1,17 @@
+header, footer {
+    background-color: #f05a5a;
+    color: rgb(178, 199, 245);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
