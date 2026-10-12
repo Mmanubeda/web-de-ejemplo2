@@ -1,0 +1,45 @@
+ body {
+            margin: 0;
+            background-color: white;
+            font-family: "Times New Roman";
+        }
+
+        .caja {
+            background-color: rgba(100, 120, 140, 0.85);
+            color: white;
+            margin: 15px 10px;
+            padding: 15px;
+            height: 190px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        .texto {
+            background-color: rgba(230, 230, 180, 0.8);
+            margin: 0px 10px;
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        .rosa {
+            background-color: pink;
+        }
+
+        .verde {
+            background-color: #caca9b;
+            font-weight: bold;
+        }
+        
+       .mando {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
