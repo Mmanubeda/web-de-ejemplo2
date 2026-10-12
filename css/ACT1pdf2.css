@@ -17,11 +17,11 @@ ul {
     list-style-type: square;
 }
 nav a {
-    color: #fffb00; 
+    color: #ff00dd; 
     text-decoration: none;
 }
 header{
-    background-color:rgb(168, 73, 9);
+    background-color:rgb(108, 184, 255);
     padding: 20px;
     color: rgb(245, 248, 245);
     text-align: center;

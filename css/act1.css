@@ -1,11 +1,32 @@
-.tabla {
-  border-collapse: collapse;
+.titulo {color: red;}
+.imagen-cuaderno {
+    display: block;
+    width: 250px;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto 0;
+}
+body p {font-size: 30px;
+     font-family: verdana;
+    
 }
 
-.tabla td,
-.tabla th {
-  height: 10px;
-  padding: 2px 4px;
-  line-height: 1;
-  border: 1px solid black;
+
+.footer {font-size: 10px;
+    border: 2px solid rgb(4, 19, 156);
+    background-color: lightgray;
+    padding: 0;
+    margin: 30px auto;
+    margin: 20px;
+    
+}
+nav a {
+    color: #ff00ff; 
+    text-decoration: none;
+}
+header{
+    background-color:rgb(91, 168, 255);
+    padding: 20px;
+    color: rgb(245, 248, 245);
+    text-align: center;
 }

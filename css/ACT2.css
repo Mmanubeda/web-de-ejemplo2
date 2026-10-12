@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  background-image: url("flor.png");
+  background-image: url("../img/flor.png");
   background-size: 120%;
   background-position: center 0px;
   background-repeat: no-repeat;
@@ -39,11 +39,11 @@ body {
     padding: 12px;
 }
 nav a {
-    color: #fffb00; 
+    color: #ff00f2; 
     text-decoration: none;
 }
 header{
-    background-color:rgb(168, 73, 9);
+    background-color:rgb(99, 167, 255);
     padding: 20px;
     color: rgb(245, 248, 245);
     text-align: center;
