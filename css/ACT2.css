@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  background-image: url("../img/flor.png");
+  background-image: url("../IMG/flor.png");
   background-size: 120%;
   background-position: center 0px;
   background-repeat: no-repeat;
