@@ -1,16 +1,121 @@
-.ENT{background-color: rgb(0, 225, 255);}
-.DIG{background-color: lightblue;}
-.SI{background-color: orange;}
-.BDD{background-color: purple;}
-.ING{background-color: red;}
-.PRO{background-color: grey;}
-.HOR{background-color: pink;}
-.LMM{background-color: green;}
-.IPE{background-color: gold;}
-.PID{background-color: blue;}
-.DIA{background-color: lightgreen;}
-.SOS{background-color: violet;}
-.for{background-color: rgb(206, 255, 142);}
-.ENL{background-color: rgb(253, 192, 192);}
-.GRI{background-color: rgb(190, 190, 190);}
-.VER{background-color: rgb(120, 204, 109);}
+/* Importar fuente moderna desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Fondo con degradado moderno fuera de la tabla */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de "Volver al inicio" con fondo sólido visible siempre */
+header nav > a {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #4f46e5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+header nav > a:hover {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    transform: translateY(-2px);
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #d5dbe3;
+    border-right: 1px solid #d5dbe3;
+    font-size: 0.95rem;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+thead {
+    background-color: #2c3e50;
+    color: white;
+}
+
+th.DIA {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td.HOR {
+    background-color: #ecf0f1;
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* Colores personalizados para cada módulo */
+.ENT { background-color: #e8f8f5; color: #117a65; font-weight: 500; }
+.DIG { background-color: #ebf5fb; color: #2471a3; font-weight: 500; }
+.SI  { background-color: #fef9e7; color: #b7950b; font-weight: 500; }
+.BDD { background-color: #f4ecf7; color: #7d3c98; font-weight: 500; }
+.ING { background-color: #eaf2f8; color: #1b4f72; font-weight: 500; }
+.PRO { background-color: #e8f6f3; color: #0e6251; font-weight: 500; }
+.SOS { background-color: #e9f7ef; color: #196f3d; font-weight: 500; }
+.LMM { background-color: #fdf2e9; color: #b9770e; font-weight: 500; }
+.IPE { background-color: #fbebee; color: #c0392b; font-weight: 500; }
+.PID { background-color: #f2f4f4; color: #5d6d7e; font-weight: 500; }
+
+.REC {
+    background-color: #ffeaa7;
+    color: #d35400;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-top: 20px;
+}

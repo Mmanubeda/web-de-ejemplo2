@@ -15,6 +15,7 @@
                 <a href="horario.html">Horario</a>
                 <a href="formulario.html">Formulario</a>
                 <a href="calculadora.html">Calculadora</a>
+                <a href="piedra-papel-tijera.html">Piedra, papel o tijera</a>
                 <details class="menu-ejercicios">
                     <summary>Ejercicios</summary>
                     <div class="submenu">
@@ -50,14 +51,30 @@
                 Visita <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
             </p>
             <h2>MI CONSERVATORIO</h2>
-            <p>
-                <a href="https://youtu.be/WNjjS2Pm5pM" target="_blank" rel="noopener noreferrer">CONCIERTO</a>
-            </p>
+                <p><a href="https://youtu.be/WNjjS2Pm5pM" target="_blank" rel="noopener noreferrer">Ver el concierto en YouTube</a></p>
+            </section>
             <img src="IMG/descarga.png" alt="Imagen sobre el conservatorio">
+
+            <section class="juego-pong" aria-labelledby="titulo-pong">
+                <h2 id="titulo-pong">Ping-Pong</h2>
+                <p>Mueve la pala con las flechas o con A y D. También puedes tocar o arrastrar la pala en el tablero.</p>
+                <div class="marcador" aria-live="polite">
+                    <span>Tú: <strong id="marcador-jugador">0</strong></span>
+                    <span>Máquina: <strong id="marcador-maquina">0</strong></span>
+                </div>
+                <canvas id="tablero-pong" width="720" height="420" tabindex="0" aria-label="Tablero de Pong. Haz clic para usar el teclado o toca para mover la pala.">
+                    Tu navegador no permite mostrar el juego Pong.
+                </canvas>
+                <div class="controles-pong">
+                    <button id="boton-pong" type="button">Jugar</button>
+                    <p id="estado-pong" role="status">Pulsa Jugar para comenzar.</p>
+                </div>
+            </section>
         </main>
 
         <footer>
             <p>CIFP VIRGEN DE GRACIA &copy; 2026</p>
         </footer>
+        <script src="pong.js" defer></script>
     </body>
 </html>

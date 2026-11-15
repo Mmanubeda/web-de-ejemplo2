@@ -1,124 +1,145 @@
-<DOCTYPE html>
-<html lang="es">    
-    <head>
-        <meta charset="UTF-8 "/>
-        <link rel="stylesheet" href="CSS/colores.css">
-        <header>
-            <h2>Menu</h2>
-            <nav>
-                <link rel="stylesheet" href="CSS/estilo.css">
-                <a href="index.html" class="ENL">inicio</a>
-            </nav>
-        </header>
-    </head>    
-            <body>
-                    <main>
-                        <form>
-                                <fieldset>
-                                    <legend class="FOR">Formulario de contacto</legend>
-                                    <label for="nombre">Nombre:</label>
-                                    <input type="text" id="nombre" name="nombre" required><br><br>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | Formulario de contacto</title>
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/formulario.css">
+</head>
+<body class="formulario-page">
+    <header class="site-header">
+        <a class="marca" href="index.html">Menú</a>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+        </nav>
+    </header>
 
-                                    <label for="email">Correo electrónico:</label>
-                                    <input type="email" id="email" name="email" required><br><br>
+    <main class="contenido-formulario">
+        <section class="presentacion" aria-labelledby="titulo-formulario">
+            <p class="etiqueta">Formulario de contacto</p>
+            <h1 id="titulo-formulario">Envíanos un mensaje</h1>
+            <p>Cuéntanos un poco más y nos pondremos en contacto contigo. Los campos marcados con <strong>*</strong> son obligatorios.</p>
+            <div class="nota-contacto">
+                <span class="nota-icono" aria-hidden="true">@</span>
+                <p><strong>Estamos para ayudarte</strong><br>Déjanos tu consulta y te responderemos lo antes posible.</p>
+            </div>
+        </section>
 
-                                    <label for="mensaje">Mensaje:</label><br>
-                                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+        <form class="formulario-card">
+            <fieldset class="seccion-formulario">
+                <legend><span>01</span> Tus datos</legend>
+                <div class="rejilla-campos">
+                    <div class="campo">
+                        <label for="nombre">Nombre <span>*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Correo electrónico <span>*</span></label>
+                        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" autocomplete="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="600 000 000" autocomplete="tel">
+                    </div>
+                    <div class="campo">
+                        <label for="provincia">Provincia</label>
+                        <select id="provincia" name="provincia">
+                            <option value="">Selecciona una provincia</option>
+                            <option value="cordoba">Córdoba</option>
+                            <option value="ciudad_real">Ciudad Real</option>
+                            <option value="toledo">Toledo</option>
+                            <option value="jaen">Jaén</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
 
-                                    <fieldset>
-                                    <legend class="FOR">Fechas y horas</legend>
+            <fieldset class="seccion-formulario">
+                <legend><span>02</span> Tu consulta</legend>
+                <div class="rejilla-campos">
+                    <div class="campo">
+                        <label for="asunto">Motivo de contacto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="">Selecciona un motivo</option>
+                            <option value="informacion">Solicitar información</option>
+                            <option value="estudios">Consulta sobre estudios</option>
+                            <option value="otro">Otro motivo</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="contacto">¿Cómo prefieres que te respondamos?</label>
+                        <select id="contacto" name="contacto">
+                            <option value="email">Por correo electrónico</option>
+                            <option value="telefono">Por teléfono</option>
+                        </select>
+                    </div>
+                    <div class="campo campo-completo">
+                        <label for="mensaje">Mensaje <span>*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu consulta..." required></textarea>
+                    </div>
+                </div>
+            </fieldset>
 
-                                    <!-- DATE -->
-                                    <p>
-                                        <label for="fecha">Fecha:</label>
-                                        <input type="date" id="fecha" name="fecha">
-                                    </p>
+            <fieldset class="seccion-formulario">
+                <legend><span>03</span> Preferencias y disponibilidad</legend>
+                <div class="rejilla-campos">
+                    <div class="campo">
+                        <label for="estudios">Estudios de interés</label>
+                        <select id="estudios" name="estudios">
+                            <optgroup label="Informática">
+                                <option value="dam">DAM</option>
+                                <option value="daw">DAW</option>
+                                <option value="asir">ASIR</option>
+                            </optgroup>
+                            <optgroup label="Electrónica">
+                                <option value="teleco">Sistemas de Telecomunicaciones</option>
+                                <option value="electronica">Electrónica</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha">Fecha preferida</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="hora">Hora preferida</label>
+                        <input type="time" id="hora" name="hora">
+                    </div>
+                    <div class="campo">
+                        <label for="fechaHora">Fecha y hora exactas</label>
+                        <input type="datetime-local" id="fechaHora" name="fechaHora">
+                    </div>
+                    <div class="campo">
+                        <label for="mes">Mes de interés</label>
+                        <input type="month" id="mes" name="mes">
+                    </div>
+                    <div class="campo">
+                        <label for="semana">Semana de interés</label>
+                        <input type="week" id="semana" name="semana">
+                    </div>
+                    <div class="campo campo-completo">
+                        <label for="lenguajes">Lenguajes favoritos</label>
+                        <select id="lenguajes" name="lenguajes" multiple size="4" aria-describedby="ayuda-lenguajes">
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="java">Java</option>
+                        </select>
+                        <small id="ayuda-lenguajes">Puedes seleccionar varias opciones con Ctrl (Windows) o Cmd (Mac).</small>
+                    </div>
+                </div>
+            </fieldset>
 
-                                    <!-- TIME -->
-                                    <p>
-                                        <label for="hora">Hora:</label>
-                                        <input type="time" id="hora" name="hora">
-                                    </p>
+            <div class="acciones-formulario">
+                <button class="boton-enviar" type="submit">Enviar mensaje</button>
+                <button class="boton-limpiar" type="reset">Limpiar formulario</button>
+            </div>
+        </form>
+    </main>
 
-                                    <!-- DATETIME-LOCAL -->
-                                    <p>
-                                        <label for="fechaHora">Fecha y hora:</label>
-                                        <input type="datetime-local" id="fechaHora" name="fechaHora">
-                                    </p>
-
-                                    <!-- MONTH -->
-                                    <p>
-                                        <label for="mes">Mes:</label>
-                                        <input type="month" id="mes" name="mes">
-                                    </p>
-
-                                    <!-- WEEK -->
-                                    <p>
-                                        <label for="semana">Semana:</label>
-                                        <input type="week" id="semana" name="semana">
-                                    </p>
-                                    </fieldset>
-                                    <fieldset>
-                                    <legend class="FOR">Listas</legend>
-
-                                    <!-- SELECT -->
-                                    <p>
-                                        <label for="provincia">Provincia:</label>
-
-                                        <select id="provincia" name="provincia">
-                                        <option value="">Selecciona una provincia</option>
-
-                                        <option value="cordoba">Córdoba</option>
-                                        <option value="ciudad_real">Ciudad Real</option>
-                                        <option value="toledo">Toledo</option>
-                                        <option value="jaen">Jaén</option>
-                                        </select>
-                                    </p>
-
-                                    <!-- SELECT CON GRUPOS -->
-                                    <p>
-                                        <label for="estudios">Estudios:</label>
-
-                                        <select id="estudios" name="estudios">
-                                        <optgroup label="Informática">
-                                            <option value="dam">DAM</option>
-                                            <option value="daw">DAW</option>
-                                            <option value="asir">ASIR</option>
-                                        </optgroup>
-
-                                        <optgroup label="Electrónica">
-                                            <option value="teleco">Sistemas de Telecomunicaciones</option>
-
-                                            <option value="electronica">Electrónica</option>
-                                        </optgroup>
-                                        </select>
-                                    </p>
-
-                                    <!-- SELECT MULTIPLE -->
-                                    <p>
-                                        <label for="lenguajes"> Lenguajes favoritos: </label>
-
-                                        <select id="lenguajes" name="lenguajes" multiple="" size="4">
-                                        <option value="html">HTML</option>
-                                        <option value="css">CSS</option>
-                                        <option value="javascript">JavaScript</option>
-                                        <option value="java">Java</option>
-                                        </select>
-                                    </p>
-                                    </fieldset>
-                        </form>
-                    </main>   
-                    <fieldset>
-          <legend class="FOR">Botones</legend>
-
-          <!-- SUBMIT -->
-          <input type="submit" value="Enviar formulario">
-
-          <!-- RESET -->
-          <input type="reset" value="Limpiar formulario">
-        </fieldset>
-                <footer>
-                    <p>CIFP VIRGEN DE GRACIA &copy; 2026</p>
-                </footer>     
-            </body>
+    <footer class="pie-formulario">
+        <p>CIFP VIRGEN DE GRACIA &copy; 2026</p>
+    </footer>
+</body>
 </html>

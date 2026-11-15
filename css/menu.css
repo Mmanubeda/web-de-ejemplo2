@@ -1,44 +1,98 @@
+/* Barra de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Enlaces directos del menú */
+nav > a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+nav > a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Menú desplegable con <details> y <summary> */
 .menu-ejercicios {
     position: relative;
     display: inline-block;
 }
 
 .menu-ejercicios summary {
-    color: #ff00bf;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     cursor: pointer;
-    display: inline-block;
-    list-style: none;
+    list-style: none; /* Oculta la flecha por defecto en algunos navegadores */
+    user-select: none;
+    transition: all 0.2s ease;
 }
 
 .menu-ejercicios summary::-webkit-details-marker {
-    display: none;
+    display: none; /* Oculta la flecha en Safari/Chrome */
 }
 
-.menu-ejercicios summary:hover,
-.menu-ejercicios summary:focus-visible {
-    color: #000;
+.menu-ejercicios summary::after {
+    content: ' ▾';
+    font-size: 0.8rem;
 }
 
+.menu-ejercicios[open] summary,
+.menu-ejercicios summary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Submenú desplegado */
 .submenu {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    min-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
     z-index: 10;
-    min-width: 140px;
-    padding: 6px;
-    background-color: rgb(136, 241, 255);
-    border: 1px solid #000;
-    text-align: left;
-}
-
-.submenu a {
-    display: inline-block;
-    padding: 6px 4px;
-    white-space: nowrap;
 }
 
 .submenu ul {
+    list-style: none;
     margin: 0;
-    padding-left: 24px;
-    list-style-type: circle;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.submenu ul li {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.submenu ul li a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: #334155;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submenu ul li a:hover {
+    background-color: #f1f5f9;
+    color: #4f46e5;
 }
